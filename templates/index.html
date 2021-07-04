@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+{% block title %}
+Fish Weight a kandupidi
+{% endblock %}
+{% block content %}
+<div class="container-fluid pd2">
+    {% if prediction %}
+        <div class="row justify-content-md-center mb-4">
+            <h3 class='text-primary'>The predicted weight is {{ prediction[0] }}</h3>
+        </div>
+    {% endif %}
+    <form class="form-horizontal" action = "?" method="post">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <h4>Choose the Fish Name</h4>
+                </div>
+                <div>
+                    <div class="col">
+                        <input type="radio" id="parkki" name="fish_name" value="1">
+                        <label for="Parkki">Parkki</label>
+                    </div>
+                    <div class="col">
+                        <input type="radio" id="perch" name="fish_name" value="2">
+                        <label for="Perch">Perch</label>
+                    </div>
+                    <div class="col">
+                        <input type="radio" id="pike" name="fish_name" value="3">
+                        <label for="Pike">Pike</label>
+                    </div>
+                    <div class="col">
+                        <input type="radio" id="roach" name="fish_name" value="4">
+                        <label for="Roach">Roach</label>
+                    </div>
+                    <div class="col">
+                        <input type="radio" id="smelt" name="fish_name" value="5">
+                        <label for="Smelt">Smelt</label>
+                    </div>
+                    <div class="col">
+                        <input type="radio" id="whitefish" name="fish_name" value="6">
+                        <label for="Whitefish">Whitefish</label>
+                    </div>
+                    <div class="col">
+                        <input type="radio" id="nofish" name="fish_name" value="0" checked>
+                        <label for="nofish">Not Sure</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <h4>Enter the Attributes of the fish</h4>
+                    </div>
+                    <div class="form-group">
+                        <label for="length1">Length 1</label>
+                        <input type="number" min=7 max=60 class="form-control" id="length1" name="length1" placeholder="Enter the length 1">
+                    </div>
+                    <div class="form-group">
+                        <label for="length2">Length 2</label>
+                        <input type="number" min=8 max=64  class="form-control" id="length2" name="length2" placeholder="Enter the length 2">
+                    </div>
+                    <div class="form-group">
+                        <label for="length3">Length 3</label>
+                        <input type="number" min=8 max=68 class="form-control" id="length3" name="length3" placeholder="Enter the length 3">
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Height</label>
+                        <input type="number" min=1 max=20 class="form-control" id="height"  name="height" placeholder="Enter the height">
+                    </div>
+                    <div class="form-group">
+                        <label for="width">Width</label>
+                        <input type="number" min=1 max=9 class="form-control" id="width"  name="width" placeholder="Enter the width">
+                    </div>
+                </div> 
+                <button type="submit" class="btn btn-primary">
+                    Predict the Weight
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
