@@ -18,7 +18,7 @@ prediction = None
 def home():
     return render_template('index.html')
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/predict', methods=['POST'])
 def predict():    
     if request.method == "POST":
         #get form data

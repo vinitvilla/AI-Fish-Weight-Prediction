@@ -9,7 +9,7 @@ Fish Weight a kandupidi
             <h3 class='text-primary'>The predicted weight is {{ prediction[0] }}</h3>
         </div>
     {% endif %}
-    <form class="form-horizontal" action = "?" method="post">
+    <form class="form-horizontal" action = "{{ url_for('predict') }}" method="post">
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
