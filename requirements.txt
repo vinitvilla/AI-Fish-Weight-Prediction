@@ -1,4 +1,8 @@
 Flask
 joblib
 numpy
+pandas
+pickle
+matplotlib
+sklearn
 uwsgi
