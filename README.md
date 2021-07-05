@@ -1,9 +1,6 @@
-
 # Fish Weight Predictor
 ## Description
 Fish Weight Predictor is a tool which predicts the weight of a fish by providing certain attributes value. The dataset utilised is a record of the sales of seven distinct fish species at fish markets. The predictive model developed utilises machine-friendly data using this dataset to estimate the weight of fish.
-
-
 
 ## Usage
 There are seven different fish species, namely,
