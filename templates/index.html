@@ -6,7 +6,7 @@ Fish Weight a kandupidi
 <div class="container-fluid pd2">
     {% if prediction %}
         <div class="row justify-content-md-center mb-4">
-            <h3 class='text-primary'>The predicted weight is {{ prediction[0] }}</h3>
+            <h3 class='text-primary'>The predicted weight is {{ prediction[0] }} gram</h3>
         </div>
     {% endif %}
     <form class="form-horizontal" action = "{{ url_for('predict') }}" method="post">
@@ -54,24 +54,24 @@ Fish Weight a kandupidi
                         <h4>Enter the Attributes of the fish</h4>
                     </div>
                     <div class="form-group">
-                        <label for="length1">Length 1</label>
-                        <input type="number" min=7 max=60 class="form-control" id="length1" name="length1" placeholder="Enter the length 1">
+                        <label for="length1">Length 1 (in cm)</label>
+                        <input type="number" min=7 max=60 class="form-control" id="length1" name="length1" placeholder="Enter the length 1 (in cm)">
                     </div>
                     <div class="form-group">
-                        <label for="length2">Length 2</label>
-                        <input type="number" min=8 max=64  class="form-control" id="length2" name="length2" placeholder="Enter the length 2">
+                        <label for="length2">Length 2 (in cm)</label>
+                        <input type="number" min=8 max=64  class="form-control" id="length2" name="length2" placeholder="Enter the length 2 (in cm)">
                     </div>
                     <div class="form-group">
-                        <label for="length3">Length 3</label>
-                        <input type="number" min=8 max=68 class="form-control" id="length3" name="length3" placeholder="Enter the length 3">
+                        <label for="length3">Length 3 (in cm)</label>
+                        <input type="number" min=8 max=68 class="form-control" id="length3" name="length3" placeholder="Enter the length 3 (in cm)">
                     </div>
                     <div class="form-group">
-                        <label for="height">Height</label>
-                        <input type="number" min=1 max=20 class="form-control" id="height"  name="height" placeholder="Enter the height">
+                        <label for="height">Height (in cm)</label>
+                        <input type="number" min=1 max=20 class="form-control" id="height"  name="height" placeholder="Enter the height (in cm)">
                     </div>
                     <div class="form-group">
-                        <label for="width">Width</label>
-                        <input type="number" min=1 max=9 class="form-control" id="width"  name="width" placeholder="Enter the width">
+                        <label for="width">Width (in cm)</label>
+                        <input type="number" min=1 max=9 class="form-control" id="width"  name="width" placeholder="Enter the width (in cm)">
                     </div>
                 </div> 
                 <button type="submit" class="btn btn-primary">
