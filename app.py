@@ -4,7 +4,8 @@ import joblib
 
 app = Flask(__name__)
 
-NOFISH = 0
+NOFISH = -1
+BREAM = 0
 PARKKI = 1
 PERCH = 2
 PIKE = 3
@@ -37,11 +38,11 @@ def predict():
             return "Please Enter valid values"
 
 def predictTheWeight(length1, length2, length3, height, width, fishname):
-    fish_array = [0, 0, 0, 0, 0, 0, 0]
+    fish_array = [0, 0, 0, 0, 0, 0, 0, 0]
     if int(fishname) == NOFISH:
         pass
     else:
-        fish_array[int(fishname) - 1] = 1
+        fish_array[int(fishname)] = 1
 
     #keep all inputs in array
     test_data = [length1, length2, length3, height, width, *fish_array]
